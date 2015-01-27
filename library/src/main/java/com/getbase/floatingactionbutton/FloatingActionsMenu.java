@@ -148,12 +148,12 @@ public class FloatingActionsMenu extends ViewGroup {
     private void createAddButton(Context context) {
         mAddButton = new AddFloatingActionButton(context) {
             @Override
-            void updateBackground() {
+            void updateDefaultBackground() {
                 mPlusColor = mAddButtonPlusColor;
                 mColorNormal = mAddButtonColorNormal;
                 mColorPressed = mAddButtonColorPressed;
                 mStrokeVisible = mAddButtonStrokeVisible;
-                super.updateBackground();
+                super.updateDefaultBackground();
             }
 
             public void setDefaultActionStyle(FloatingActionButton button) {
@@ -547,7 +547,7 @@ public class FloatingActionsMenu extends ViewGroup {
 
     public void setDefaultMode() {
         collapse();
-        mAddButton.updateBackground();
+        mAddButton.updateDefaultBackground();
         mAddButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

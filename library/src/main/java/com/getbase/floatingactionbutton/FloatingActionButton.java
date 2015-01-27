@@ -90,7 +90,7 @@ public class FloatingActionButton extends ImageButton {
         mShadowOffset = getDimension(R.dimen.fab_shadow_offset);
         updateDrawableSize();
 
-        updateBackground();
+        updateDefaultBackground();
     }
 
     private void updateDrawableSize() {
@@ -110,7 +110,7 @@ public class FloatingActionButton extends ImageButton {
             mSize = size;
             updateCircleSize();
             updateDrawableSize();
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
@@ -123,7 +123,7 @@ public class FloatingActionButton extends ImageButton {
         if (mIcon != icon) {
             mIcon = icon;
             mIconDrawable = null;
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
@@ -131,7 +131,7 @@ public class FloatingActionButton extends ImageButton {
         if (mIconDrawable != iconDrawable) {
             mIcon = 0;
             mIconDrawable = iconDrawable;
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
@@ -149,7 +149,7 @@ public class FloatingActionButton extends ImageButton {
     public void setColorNormal(int color) {
         if (mColorNormal != color) {
             mColorNormal = color;
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
@@ -167,7 +167,7 @@ public class FloatingActionButton extends ImageButton {
     public void setColorPressed(int color) {
         if (mColorPressed != color) {
             mColorPressed = color;
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
@@ -185,14 +185,14 @@ public class FloatingActionButton extends ImageButton {
     public void setColorDisabled(int color) {
         if (mColorDisabled != color) {
             mColorDisabled = color;
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
     public void setStrokeVisible(boolean visible) {
         if (mStrokeVisible != visible) {
             mStrokeVisible = visible;
-            updateBackground();
+            updateDefaultBackground();
         }
     }
 
@@ -230,7 +230,7 @@ public class FloatingActionButton extends ImageButton {
         setMeasuredDimension(mDrawableSize, mDrawableSize);
     }
 
-    void updateBackground() {
+    void updateDefaultBackground() {
         final float strokeWidth = getDimension(R.dimen.fab_stroke_width);
         final float halfStrokeWidth = strokeWidth / 2f;
 
