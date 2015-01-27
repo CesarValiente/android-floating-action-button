@@ -75,6 +75,8 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         if (mFloatingActionsMenu.isExpanded()) {
             mFloatingActionsMenu.setDefaultMode();
+        } else {
+            super.onBackPressed();
         }
 
     }
