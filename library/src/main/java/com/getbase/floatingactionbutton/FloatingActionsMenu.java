@@ -547,6 +547,13 @@ public class FloatingActionsMenu extends ViewGroup {
 
     public void setDefaultMode() {
         collapse();
+        mAddButton.updateBackground();
+        mAddButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggle();
+            }
+        });
     }
 
     public boolean isExpanded() {
